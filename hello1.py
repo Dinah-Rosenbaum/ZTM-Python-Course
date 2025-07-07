@@ -40,3 +40,18 @@
 # age = 2025 - int(birth_year)
 # print(f'You are {age} years old')
 
+# username = input('What is your username?')
+# password = input('What is your password?')
+# password_length = len(password)
+# hidden_password = '*' * password_length
+# print(f'Your username is {username} and your password, {hidden_password}, is {password_length} characters long')
+
+# cart = [
+#     'notebooks',
+#     'sunglasses',
+#     'toys',
+#     'grapes'
+# ]
+# print(cart[0::2])
+# starts at zero, steps through by step of 2
+
