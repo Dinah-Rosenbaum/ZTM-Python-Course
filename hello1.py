@@ -144,3 +144,114 @@
 #     print('you are not of age!')
 # print('okokok')
 
+# while True:
+#     input('say something: ')
+#     break
+
+# my_list = [1,2,3]
+# for item in my_list:
+#     print(item)
+
+# i = 0
+# while i < len(my_list):
+#     print(my_list[i])
+#     i += 1
+
+
+# picture = [
+#     [0,0,0,1,0,0,0],
+#     [0,0,1,1,1,0,0],
+#     [0,1,1,1,1,1,0],
+#     [1,1,1,1,1,1,1],
+#     [0,0,0,1,0,0,0],
+#     [0,0,0,1,0,0,0]
+# ]
+# fill = '*'
+# empty = ' '
+# for row in picture:
+#     for pixel in row:
+#         if pixel:
+#             print(fill, end='')
+#         else:
+#             print(empty, end='')
+#     print('')
+
+
+# some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+# duplicates = []
+# for value in some_list:
+#     if some_list.count(value) > 1:
+#         if value not in duplicates:
+#             duplicates.append(value)
+# print(duplicates)
+
+
+# def sum(num1, num2):
+#     return num1 + num2
+
+# print(sum(10,sum(10, sum(10,5))))
+
+
+# Nested Functions:
+# def sum(num1, num2):
+#     def another_func(num1, num2):
+#         return num1 + num2
+#     return another_func(num1, num2)
+
+# total = sum(10,20)
+# print(total)
+
+# def checkDriverAge():
+#     age = input("What is your age?: ")
+#     if int(age) < 18:
+#         print("Sorry, you are too young to drive this car. Powering off")
+#     elif int(age) > 18:
+#         print("Powering On. Enjoy the ride!");
+#     elif int(age) == 18:
+#         print("Congratulations on your first year of driving. Enjoy the ride!")
+# checkDriverAge()
+
+# Default Values:
+# def checkDriverAge(age=0):
+#     if int(age) < 18:
+#         print("Sorry, you are too yound to drive this car. Powering off")
+#     elif int(age) > 18:
+#         print("Powering On. Enjoy the ride!");
+#     elif int(age) == 18:
+#         print("Congratulations on your first year of driving. Enjoy the ride!")
+# checkDriverAge(19)
+
+
+# Clean Code:
+# def is_even(num):
+#     return num % 2 == 0
+
+# print(is_even(52))
+
+
+# Positional Arguments and Keyword Arguments:
+# def super_func(*args):
+#     print(args)
+#     print(sum(args))
+
+# super_func(1,2,3,4,5)
+
+
+# def super_func(*args, **kwargs):
+#     total = 0
+#     for items in kwargs.values():
+#         total += items
+#     return sum(args) + total
+# print(super_func(1,2,3,4,5, num1=5, num2=10))
+
+
+# def highest_even(li):
+#     evens = []
+#     for item in li:
+#         if item % 2 == 0:
+#             evens.append(item)
+#     return max(evens)
+# print(highest_even([3,10,4,8,11]))
+
+
+# Walrus Operator:
