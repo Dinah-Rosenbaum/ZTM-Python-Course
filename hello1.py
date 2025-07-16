@@ -265,4 +265,68 @@
 # print(a)
 
 
+# Nonlocal keyword and scope and nested functions:
+# def outer():
+#     x = "local"
+#     def inner():
+#         nonlocal x
+#         x = "nonlocal"
+#         print("inner:", x)
+#     inner()
+#     print("outer:", x)
+# outer()
+
+
+# class PlayerCharacter:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def run(self):
+#         print('run')
+#         return 'done'
+
+# player1 = PlayerCharacter('Cindy', 44)
+# player2 = PlayerCharacter('Tom', 21)
+# player1.attack = 100
+# player2.attack = 50
+# print(player1.name)
+# print(player2.name)
+# print(player1.age)
+# print(player2.age)
+# print(player1.attack)
+# print(player2.attack)
+
+# Result:  
+# Cindy
+# Tom
+# 44
+# 21
+# 100
+# 50
+
+
+# Exercise Cats Everywhere
+
+# Given the  below class:
+    
+# class Cat:
+#     species = 'mammal'
+
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+# #Instantiate the Cat object with 3 cats
+# cat1 = Cat('cat1', 5)
+# cat2 = Cat('cat2', 13)
+# cat3 = Cat('cat3', 3)
+
+# #Create function that finds the oldest cat
+# def oldest_cat(*args):
+#     return max(args)
+
+# #Print out: "The oldest cat is x years old.".
+# print(f'Oldest Cat is {oldest_cat(cat1.age, cat2.age, cat3.age)} years old.')
+
 
