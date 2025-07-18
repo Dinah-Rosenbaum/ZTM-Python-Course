@@ -329,4 +329,172 @@
 # #Print out: "The oldest cat is x years old.".
 # print(f'Oldest Cat is {oldest_cat(cat1.age, cat2.age, cat3.age)} years old.')
 
+#--------------------------------
+# class Pets():
+#     animals = []
+#     def __init__(self, animals):
+#         self.animals = animals
+
+#     def walk(self):
+#         for animal in self.animals:
+#             print(animal.walk())
+
+# class Cat():
+#     is_lazy = True
+
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def walk(self):
+#         return f'{self.name} is just walking around'
+
+# class Simon(Cat):
+#     def sing(self, sounds):
+#         return f'{sounds}'
+
+# class Sally(Cat):
+#     def sing(self, sounds):
+#         return f'{sounds}'
+
+#-------------------------------
+#1 Add another Cat
+
+# class Tikachu(Cat):
+#     def sing(self,sounds):
+#         return f'{sounds}'
+
+#2 Create a list of all of the pets (create 3 cat instances from the above)
+# my_cats = []
+# cat1 = Simon('Simon', 10)
+# cat2 = Sally('Sally', 15)
+# cat3 = Tikachu('Tikachu', 5)
+
+# my_cats.append(cat1)
+# my_cats.append(cat2)
+# my_cats.append(cat3)
+
+#OR my_cats = [Simon('Simon', 10), Sally('Sally', 15), Tikachu('Tikachu', 5)]
+
+#3 Instantiate the Pet class with all your cats use variable my_pets
+
+# my_pets = Pets(my_cats)
+
+#4 Output all of the cats walking using the my_pets instance
+
+# my_pets.walk()
+#-------------------------------
+#------------------------------
+
+# class User():
+#     def __init__(self, email):
+#         self.email = email
+#     def sign_in(self):
+#         print('logged in')
+
+# class Wizard(User):
+#     def __init__(self, name, power, email):
+#         super().__init__(email)
+#         self.name = name
+#         self.power = power
+#     def attack(self):
+#         print(f'attacking with power of {self.power}')
+        
+# class Archer(User):
+#     def __init__(self, name, num_arrows):
+#         self.name = name
+#         self.num_arrows = num_arrows
+    
+
+    # print(f'attacking with arrows: arrows left- {self.num_arrows}')
+# wizard1 = Wizard('Merlin', 50, 'merlin@gmail.com')
+
+# print(wizard1.email)
+# archer1 = Archer('Robin', 100)
+# [isinstance keyword]showing scope and inheritance
+# [dir keyword] showing what functions are available for that object
+#-------------------------------------
+#-------------------------------------
+
+# Dunder Methods:
+# class Toy():
+#     def __init__(self, color, age):
+#         self.color = color
+#         self.age = age
+#         self.my_dict = {
+#             'name': 'Yoyo',
+#             'has_pets': False
+#         }
+
+#     def __str__(self):
+#         return (f'{self.color}')
+    
+#     def __len__(self):
+#         return 5
+    
+#     def __call__(self):
+#         return('yesss??')
+    
+#     def __getitem__(self, i):
+#         return self.my_dict[i]
+
+# action_figure = Toy('red', 0)
+# print(action_figure.__str__())       
+# print(str(action_figure))
+# print(len(action_figure))
+# print (action_figure())
+# print (action_figure['name'])
+
+# Exercise:
+
+# class SuperList(list):
+#     def __len__(self):
+#         return 1000
+    
+# super_list1 = SuperList();
+
+# print(len(super_list1))
+# super_list1.append(5)
+# print(super_list1[0])
+# print(issubclass(SuperList, list))
+# print(issubclass(list, object))
+#---------------------------------
+#---------------------------------
+
+# class User():
+#     def sign_in(self):
+#         print('logged in')
+
+# class Wizard(User):
+#     def __init__(self, name, power):
+#         self.name = name
+#         self.power = power
+#     def attack(self):
+#         print(f'attacking with power of {self.power}')
+        
+# class Archer(User):
+#     def __init__(self, name, arrows):
+#         self.name = name
+#         self.arrows = arrows
+    
+#     def check_arrows(self):
+#         print(f'{self.arrows} remaining')
+
+#     def run(self):
+#         print('ran really fast')
+
+# class HybridBorg(Wizard, Archer):
+#     def __init__(self, name, power, arrows):
+#         Archer.__init__(self, name, arrows)
+#         Wizard.__init__(self, name, power)
+
+# hb1 = HybridBorg('borgie', 50, 100)
+# print(hb1.check_arrows())
+
+# print(f'attacking with arrows: arrows left- {self.num_arrows}')
+# wizard1 = Wizard('Merlin', 50, 'merlin@gmail.com')
+# print(wizard1.email)
+# archer1 = Archer('Robin', 100)
+#--------------------------------
+#---------------------------------
 
