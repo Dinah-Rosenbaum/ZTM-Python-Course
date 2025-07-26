@@ -1,3 +1,120 @@
+# Developer's Fundamentals
+# I- learn efficient ways of doing things, examples of different methods and function - don't memorize everything, go by the most useful tools'
+#II- Commenting your code - adding value through comments, keep it simple, easy to read, make sure they are understandable
+#III- Know what data structure to use and when - takes practice and experience
+#IV- What is good, clean code?  
+    #Concise but not too concise, needs to be readable - 
+    #Easily readable, no extra stuff - don't use obscure keywords - 
+    #Predictability (each part efficiently does one thing really well) - 
+    #DRY (don't repeat yourself)
+#V- Test your assumptions, test code in detail, prove that ach part of the code is what you think it is
+#VI- Libraries enable you to not have to start from scratch, but only use if:
+    #there is broad support for the library
+    #you can't just write your own library for the purpose at hand
+    #read about libraries and combine different techniques to create something useful
+#VII- Pick the right library - up to date, lots of community support
+
+#Each coding language excels at some things and doesn't excel at others - they are specialized so many are needed
+#For each language, learn:  Terms, Data Types, Actions, and Best Practices
+#Lists
+#   list slicing creates new list
+#   lists are mutable, unlike strings
+#   copying different from modifying a list
+#
+#4 Pillars of OOP
+#   1- Encapsulation- use classes, attributes, methods, etc. to build an integrated structure.  Rather than separating classes an attributes, wrap them all in the same function
+#   2- Abstraction - getting access to only what is necessary 
+#       using built-in function
+#       avoid coding from scratch 
+#       abstract away variables for which the details aren't necessary to understand
+#       use private variable (._name) to abstract away.  Dunder methods are example
+#   3- Inheritance - new objects take on the properties of existing objects 
+#       inherit classes, parent and children - avoids repeating code
+#   4- Polymorphism - output different according to what object is calling it - enables customization of methods according to specific uses
+
+#Data Types 
+#   Fundamental, Custom (Classes), Specialized, None, and Complex (imaginary)
+
+#   int - stored binary
+#       
+#   float - stored in two places, one binary before the . and one after
+#   string - sometimes single quotes, sometimes double; concatenation only uses strings
+#   escape sequences - 
+#       Variables in snake case, only letters, numbers, and underscores.  Are case sensitive. Constants are variables which are not changed
+#       One way of assigning variables - A,B,C = 1,2,3 =>> A1, B2, C3
+#Expressions vs. Statements - expression is a piece of code producing a value, 
+#   statement is like iq = 5
+#Augmented Assignment Operator - i = += 2
+#Escape Sequences - >  \  what comes after is string, used to deal with single vs double quotes
+#   \t add table after \
+#   \n add carriage return after \
+#Formatted Strings - f-string - print(f'hi' + {name} + '.  You are str{age} + years old'.)
+#String Indexes - [start:stop:stepover]  - 
+#[0:7] from zero to seven not including seven - 
+#[0:8:2] from zero to eight not including eight, stepping over 2 at a time
+#[1:]from 1 until the end
+#[: : 1] show all from beginning to end, stepping one by one
+#[-1] only the last member of the list
+#[: : -1] the whole list in reverse order
+#Immutability of strings:  assigned permanently, have to make new to change
+#Built-in methods - owned by something (print, len, int, str, abs, round)
+#String methods:  .lower, .upper, .capitalize (beginning of words only), .count, dunder methods, 
+#.find, .replace
+#bool - to control flow of program; do one thing if true, another if false.  Truthy and Falsy
+#Data types interact - example is when you use int or str to change the type
+#List actions -  .append (to end of list), insert, extend (unpacks iterable) - these three modify the list in place
+    #pop - removes last item; pop(0)- removes item at index 0; remove(4)- removes the value 4 not index; join (takes iterable)- new sentence = ' '.join(['hi', 'my', 'name', 'is', 'JOJO'] join the space with each quoted item); clear; index(value, start, stop); count('value'); sort (does not produce new array, modifies in place); copy; reverse (used with sort) or another way is: [::-1] which creates new list
+#List functions- len, True, in, sorted (produces new array, new copy, like [:])
+#List Unpacking- 
+    #a,b,c *other, d = [1,2,,3,4,5,6,7,8,9]
+    #print(a) => 1
+    #print(b) => 2
+    #print(c) => 3
+    #print(other) => [4,5,6,7,8]
+    #print(d) => 9
+#None, null = absence of value, used as a starting point
+#Dictionaries
+    #ordered
+    #can contain lists, bool, strings, etc.
+    #dictionaries can hold more information, more efficient use of resources
+    #dictionary keys are immutable and unique
+    #.keys, .items, .values, .clear, .copy, .pop, .popitem, .update - print(user.update({'ages':55}))
+#Tuples
+    #immutable lists
+    #accessible through indexing
+    #communicates that shouldn't be changed
+    #makes code more predictable, efficient, easier, faster than list to process, less flexible though
+    #tuple can be a key in dicctionary
+    #(2,) tuple with single item
+    #x,y,z, other works with tuples, also .count, .indx, print
+#Sets
+    #unordered, unique objects (no duplicates)
+    #each item in one and only one location in memory
+    #doesn't allow duplicates to be added
+    #making a set out of a list returns only the unique items
+    #no indexing
+    #.add, .copy, clear, and the functions in, len, list
+    #also .difference (print(my_set.difference(your_set)))
+    #also .discard() discard a value in a set
+    #.difference_update - remove all items of another set from this set
+    #.intersection - items in common
+    #.isdisjoint - are the Venn diagram circles overlapping? no = disjoint
+    # .union or | - unites but removes duplicates
+    #.issubset - my_set is subset of your_set
+    #.superset - my_set encompasses everything that is in your_set
+
+#Conditional Logic - controlling the flow of the code, telling it to skip lines according to conditional logic
+    #elif- can have multiple ones
+    #indentation spacing - 4 spaces or tab, is distinction between hierarchies
+
+#Falsy and Truthy
+    #
+
+#----------------------------------------------
+#----------------------------------------------
+
+#----------------------------------------------
+#----------------------------------------------
 #print('helloooo')
 
 # first_name = 'Dinah'
@@ -498,3 +615,44 @@
 #--------------------------------
 #---------------------------------
 
+# Map Function:
+# my_list = [1,2,3]
+# def multiply_by2(item):
+#     return item*2
+
+# print(list(map(multiply_by2, my_list)))
+# print(my_list)
+
+#--------------------------------
+#---------------------------------
+#Filter Function: 
+# my_list = [1,2,3]
+
+# def only_odd(item):
+#     return item % 2 != 0
+
+# print(list(filter(only_odd, my_list)))
+# print(my_list)
+
+#--------------------------------
+#---------------------------------
+# Zip Function:
+# my_list = [1,2,3]
+# your_list = [10,20,30]
+
+# print(list(zip(my_list, your_list)))
+# print(my_list)
+# print(your_list)
+#--------------------------------
+#--------------------------------
+
+# Reduce Function:
+# from functools import reduce
+# my_list = [1,2,3]
+
+# def accumulator(acc, item):
+#     print(acc, item)
+#     return acc + item
+
+# print(reduce(accumulator, my_list, 0))
+# print(my_list)
