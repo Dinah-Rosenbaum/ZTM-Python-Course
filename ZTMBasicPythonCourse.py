@@ -108,7 +108,7 @@
     #indentation spacing - 4 spaces or tab, is distinction between hierarchies
 
 #Falsy and Truthy
-    #
+    #1 True 0 False
 
 #----------------------------------------------
 #----------------------------------------------
